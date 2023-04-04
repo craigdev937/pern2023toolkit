@@ -1,8 +1,9 @@
 import express from "express";
-import { HomeIndex } from "../controllers/playCon.js";
+import { PLAY } from "../controllers/playCon.js";
 
 export const playRt = express.Router();
-    playRt.get("/", HomeIndex);
+    playRt.post("/", PLAY.Create);
+    playRt.get("/", PLAY.FetchAll);
 
 
 
