@@ -1,14 +1,11 @@
 import pgk from "pg";
 const { Pool } = pgk;
 
+const connectionString = process.env.DATABASE_URL;
+
 export const dBase = new Pool({
-    user: "django",
-    password: "password1",
-    host: "localhost",
-    port: 5432,
-    database: "pern2023"
+    connectionString
 });
 
 
 
-// const connectionString = process.env.DATABASE_URL;
